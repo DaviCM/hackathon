@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import requests
 
 
-def meteorologia(hours_past=1):
+def meteorology(hours_past=1):
     now = datetime.now()
     offset = now - timedelta(hours=hours_past)
     
@@ -35,7 +35,7 @@ def sea_level(hours_past=1):
         URL = f'https://servicodados.ibge.gov.br/api/v1/rmpg/nivel/{mrgf}'
         info = requests.get(URL, params=payload)
 
-        if info.json() != []:
+        if (info.json() != []) and (type(info.json()) != dict):
             print(f'\n -------- {mrgf} -------- \n')
 
             for i in range(len(info.json())):
@@ -63,4 +63,4 @@ def parse_news(days_past=15):
         print(f'{info.json()['articles'][i]} \n')
     
 
-parse_news()
+
