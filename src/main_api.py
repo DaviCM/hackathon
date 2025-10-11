@@ -2,6 +2,7 @@
 from fastapi import FastAPI
 
 #uvicorn main_api:app --reload
+# para rodar no localhost
 
 #pega os script feito pelo Coelho
 from meteorology import meteorology
