@@ -33,4 +33,3 @@ def get_maregrafo_info():
 def home():
     return "vá para /docs ou morra"
 
-
