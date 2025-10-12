@@ -13,8 +13,12 @@ def meteorology(hours_past=0.5):
                 'velocidadeVento' : 'wind_speed_m/s',
                 'precipitacao' : 'precipitation_mm'}
     
-    payload = {'momentoInicial' : f'{(offset).strftime('%Y-%m-%d-%H-%M')}', # Formatar tempo na forma de STR
-               'momentoFinal' : f'{(now).strftime('%Y-%m-%d-%H-%M')}',
+    #necesario para não quebra no servidor
+    momentoInicial = (offset).strftime('%Y-%m-%d-%H-%M')
+    momentoFinal = (now).strftime('%Y-%m-%d-%H-%M')
+
+    payload = {'momentoInicial' : momentoInicial, # Formatar tempo na forma de STR
+               'momentoFinal' : momentoFinal,
                'codigoSensor' : '15|30|31|32|33|34'}
 
     for mrgf in maregrafos():

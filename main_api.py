@@ -4,7 +4,7 @@ from fastapi import FastAPI
 #uvicorn main_api:app --reload
 # para rodar no localhost
 
-#uvicorn main_api:app --host 0.0.0.0 --port 80
+#python -m uvicorn main_api:app --host 0.0.0.0 --port 80
 # para roda no shardecloud
 
 #pega os script feito pelo Coelho

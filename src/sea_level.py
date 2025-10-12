@@ -6,8 +6,12 @@ def sea_level(hours_past=0.5):
     now = datetime.now()
     offset = now - timedelta(hours=hours_past)
     
-    payload = {'momentoInicial' : f'{(offset).strftime('%Y-%m-%d-%H-%M')}', 
-               'momentoFinal' : f'{(now).strftime('%Y-%m-%d-%H-%M')}',
+    #necesario para não quebra no servidor
+    momentoInicial = (offset).strftime('%Y-%m-%d-%H-%M')
+    momentoFinal = (now).strftime('%Y-%m-%d-%H-%M')
+
+    payload = {'momentoInicial' : momentoInicial, 
+               'momentoFinal' : momentoFinal,
                'codigoSensor' : '1|2',
                'incluirPrevisao' : 'S'}
     
