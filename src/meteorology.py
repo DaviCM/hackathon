@@ -13,11 +13,11 @@ def meteorology(hours_past=0.5):
                 'velocidadeVento' : 'wind_speed_m/s',
                 'precipitacao' : 'precipitation_mm'}
     
-    #necesario para não quebra no servidor
-    momentoInicial = (offset).strftime('%Y-%m-%d-%H-%M')
+    # Altera o tempo antes de passar para o dict
+    momentoInicial = (offset).strftime('%Y-%m-%d-%H-%M') # Formatar tempo em STR
     momentoFinal = (now).strftime('%Y-%m-%d-%H-%M')
 
-    payload = {'momentoInicial' : momentoInicial, # Formatar tempo na forma de STR
+    payload = {'momentoInicial' : momentoInicial, 
                'momentoFinal' : momentoFinal,
                'codigoSensor' : '15|30|31|32|33|34'}
 
@@ -38,7 +38,7 @@ def meteorology(hours_past=0.5):
                 for key, new_name in format_request.items():
                     if key in dictionary:
                         dictionary[new_name] = dictionary.pop(key)
-                        del key
+                        del dictionary[key]
             yield format_info
         else:
             continue

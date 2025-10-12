@@ -6,7 +6,7 @@ def sea_level(hours_past=0.5):
     now = datetime.now()
     offset = now - timedelta(hours=hours_past)
     
-    #necesario para não quebra no servidor
+    # Altera o tempo antes de passar para o dict
     momentoInicial = (offset).strftime('%Y-%m-%d-%H-%M')
     momentoFinal = (now).strftime('%Y-%m-%d-%H-%M')
 
