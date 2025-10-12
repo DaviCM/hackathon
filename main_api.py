@@ -4,11 +4,15 @@ from fastapi import FastAPI
 #uvicorn main_api:app --reload
 # para rodar no localhost
 
+#uvicorn main_api:app --host 0.0.0.0 --port 80
+# para roda no shardecloud
+
 #pega os script feito pelo Coelho
-from meteorology import meteorology
-from news import parse_news
-from sea_level import sea_level
-from maregrafos import get_maregrafo_info
+from src.meteorology import *
+from src.news import *
+from src.sea_level import *
+
+import src.maregrafos as maregrafos
 
 #cria um obj do fastapi
 app = FastAPI()
@@ -27,7 +31,7 @@ def nivel_do_mar(tempo: float):
 
 @app.get("/maregrafo_info")
 def get_maregrafo_info():
-    return [*get_maregrafo_info()]
+    return [*maregrafos.get_maregrafo_info()]
 
 @app.get("/")
 def home():

@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 import requests
-from maregrafos import maregrafos
+from src.maregrafos import maregrafos
 
 def sea_level(hours_past=0.5):
     now = datetime.now()
