@@ -38,7 +38,6 @@ def meteorology(hours_past=0.5):
                 for key, new_name in format_request.items():
                     if key in dictionary:
                         dictionary[new_name] = dictionary.pop(key)
-                        del dictionary[key]
             yield format_info
         else:
             continue
