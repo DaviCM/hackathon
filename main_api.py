@@ -17,7 +17,7 @@ import src.maregrafos as maregrafos
 #cria um obj do fastapi
 app = FastAPI()
 
-@app.get("/meterologia/{tempo}")
+@app.get("/meteorologia/{tempo}")
 def meterologia(tempo: float):
     return [*meteorology(tempo)]
 
