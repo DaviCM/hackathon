@@ -20,7 +20,6 @@ def parse_news(days_past=15):
     info = requests.get(URL, params=payload)
     
     for i in range(len(info.json())):
-        print(f'{info.json()['articles'][i]} \n')
-
-
-parse_news()
+        yield info.json()['articles'][i]
+        
+        
