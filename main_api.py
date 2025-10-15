@@ -27,7 +27,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/meterologia/{tempo}")
+@app.get("/meteorologia/{tempo}")
 def meterologia(tempo: float):
     return {"result": [*meteorology(tempo)]}
 
