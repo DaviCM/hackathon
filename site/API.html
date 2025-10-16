@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa com Dados de Meteorologia</title>
+    <style>
+        /* Estilo da caixa */
+        #minhaCaixa {
+            display: block;
+            width: 300px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+            
+            /* Animação de fade in */
+            animation: fadeIn 2s ease-in forwards;
+            opacity: 0;
+        }
+        
+        #minhaCaixa:hover {
+            background-color: #e0e0e0;
+            cursor: pointer;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Estilo para a seção de clima */
+        #climaInfo {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <a id="minhaCaixa" href="#">Clique aqui ou espere para ver o clima!</a>
+    <div id="climaInfo"></div> <!-- Aqui vamos exibir os dados de clima -->
+
+    <script>
+        // Substitua 'sua_chave_aqui' pela sua chave real da OpenWeatherMap
+        const API_KEY = 'sua_chave_aqui';
+        const cidade = 'São Paulo,BR';  // Você pode mudar para outra cidade
+
+        // Função para buscar dados da API
+        async function buscarClima() {
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API_KEY}&units=metric&lang=pt`;  // Unidades em métrico (Celsius) e idioma em português
+            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Cidade não encontrada ou erro na API');
+                }
+                const data = await response.json();
+                
+                // Extrair os dados relevantes
+                const temperatura = data.main.temp;
+                const descricao = data.weather[0].description;
+                const umidade = data.main.humidity;
+                
+                // Exibir os dados na página
+                const climaInfo = document.getElementById('climaInfo');
+                climaInfo.innerHTML = `
+                <div id=box_cinza>
+                    Clima em ${cidade}:<br>
+                    Temperatura: ${temperatura}°C<br>
+                    Descrição: ${descricao}<br>
+                    Umidade: ${umidade}%
+                <\div>
+                `;
+            } catch (error) {
+                console.error('Erro ao buscar dados:', error);
+                document.getElementById('climaInfo').innerHTML = 'Erro ao carregar dados de clima.';
+            }
+        }
+
+        // Chama a função quando a página carregar
+        document.addEventListener('DOMContentLoaded', buscarClima);
+
+        // Opcional: Se quiser que os dados sejam buscados ao clicar na caixa
+        document.getElementById('minhaCaixa').addEventListener('click', function(event) {
+            event.preventDefault();  // Evita o redirecionamento do link
+            buscarClima();  // Busca os dados ao clicar
+        });
+    </script>
+</body>
+</html>
