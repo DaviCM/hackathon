@@ -1,5 +1,5 @@
 // 🔗 Substitua pela sua API real de meteorologia:
-const METEOROLOGIA_API = "https://mocate2ds.shardweb.app/meteorologia/2";
+const METEOROLOGIA_API = "https://mocate2ds.shardweb.app/meteorologia/5";
 const container = document.getElementById("weatherContainer");
 
 async function carregarMeteorologia() {

@@ -1,4 +1,4 @@
-const NOTICIA_API = "https://mocate2ds.shardweb.app/noticias/2";
+const NOTICIA_API = "https://mocate2ds.shardweb.app/noticias/5";
 const container = document.querySelector(".principal");
 
 async function noticia_print() {
