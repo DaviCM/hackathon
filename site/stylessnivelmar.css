@@ -120,3 +120,29 @@ body {
 .repo-link:hover {
   text-decoration: underline;
 }
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filtros select,
+.filtros input,
+.filtros button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.filtros button {
+  background: #0078d7;
+  color: white;
+  cursor: pointer;
+}
+
+.filtros button:hover {
+  background: #005fa3;
+}
