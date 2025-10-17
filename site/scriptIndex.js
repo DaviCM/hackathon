@@ -22,7 +22,7 @@ async function carregarNoticiasPrincipais() {
 
       const titulo = noticia.title || "Sem título";
       const descricao = noticia.description || "Sem descrição disponível.";
-      const imagem = noticia.image || "imagens/placeholder.png";
+      const imagem = noticia.urlToImage || "imagens/placeholder.png";
       const link = noticia.url || "#";
 
       card.innerHTML = `
