@@ -1,0 +1,138 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #00b4d8;
+}
+
+/* Contribuidores */
+.container {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #004e64;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem;
+  width: 90%;
+  max-width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #0077b6;
+}
+
+.github-btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.5rem 1rem;
+  background: #0077b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.github-btn:hover {
+  background: #0096c7;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #023e8a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.repo-link {
+  display: inline-block;
+  margin: 0.5rem 0;
+  color: #caf0f8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+}
+
+.footer-links a {
+  color: #caf0f8;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

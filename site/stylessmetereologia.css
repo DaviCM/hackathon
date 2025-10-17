@@ -1,0 +1,161 @@
+/* Reset e tema */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #0288d1;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #03a9f4;
+}
+
+/* Conteúdo principal */
+.container {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container h2 {
+  color: #01579b;
+  margin-bottom: 0.5rem;
+}
+
+.descricao {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Cards de clima */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.card h3 {
+  color: #0288d1;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 0.3rem 0;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #01579b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.repo-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #b3e5fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.card {
+  background-color: #f5f8fa;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeIn 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #004d99;
+  margin-top: 0;
+}
+
+.loading, .no-data, .erro {
+  text-align: center;
+  font-weight: bold;
+}
+
+.erro {
+  color: #d62828;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

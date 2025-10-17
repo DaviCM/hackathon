@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meteorologia - Clima Atual</title>
+  <link rel="stylesheet" href="stylessmetereologia.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <h1>🌤️ Monitoramento Meteorológico</h1>
+    <nav class="navbar">
+      <a href="index.html">🏠 Início</a>
+      <a href="Noticias.html">📰 Notícias</a>
+      <a href="NiveldoMar.html">🌊 Nível do Mar</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <h2>Condições Climáticas em Tempo Real</h2>
+    <p class="descricao">
+      Veja as principais informações meteorológicas obtidas automaticamente da API.
+    </p>
+
+    <!-- Área onde os dados serão inseridos -->
+    <div id="weatherContainer" class="cards">
+      <p>Carregando dados do clima...</p>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>&copy; 2025 Python Typers | Dados fornecidos pela API</p>
+    <a href="https://github.com/DaviCM/hackathon" target="_blank" class="repo-link">Ver Repositório</a>
+  </footer>
+
+  <script src="scriptMetereologia.js"></script>
+    <script src="scriptalerta.js"></script>
+</body>
+</html>

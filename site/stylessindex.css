@@ -1,0 +1,167 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #caf0f8, #90e0ef);
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #00b4d8;
+}
+
+/* Seção de boas-vindas */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: white;
+  margin: 2rem auto;
+  border-radius: 16px;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero h2 {
+  color: #0077b6;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Container de notícias */
+.container {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.container h2 {
+  color: #004e64;
+  margin-bottom: 1.5rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Card de notícia */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.card h3 {
+  color: #0077b6;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+  background: #0077b6;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.card a:hover {
+  background: #0096c7;
+}
+
+/* Ver mais */
+.ver-mais {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+.ver-mais:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #023e8a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.repo-link {
+  color: #caf0f8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+}
