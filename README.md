@@ -10,6 +10,3 @@
 - Backend: Python, Requests, FastAPI
 - Frontend: HTML, CSS, JS
 
-# Links
-- Link da API: https://mocate2ds.shardweb.app/
-- Documentação e APIs disponíveis: https://mocate2ds.shardweb.app/docs
